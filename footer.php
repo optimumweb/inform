@@ -10,7 +10,7 @@
             <?php endif; ?>
             <div id="bottom-bar">
                 <div class="<?php wpbp_container_class(); ?>">
-                    <div class="grid_8 mobile-center">
+                    <div class="grid_6 mobile-center">
                         <?php if ( has_nav_menu('secondary_navigation') ) : ?>
                             <nav id="footer-nav">
                                 <?php wp_nav_menu(array( 'theme_location' => 'secondary_navigation' )); ?>
@@ -18,10 +18,30 @@
                             </nav>
                         <?php endif; ?>
                     </div>
-                    <div class="grid_4 text-right mobile-center">
+                    <div class="grid_3 text-right mobile-center">
                         <div id="copy">
                             &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
                         </div>
+                    </div>
+                    <div class="grid_3 text-right mobile-center">
+                        <?php if ( function_exists('of_get_option') ) : ?>
+                            <ul class="social-links">
+                                <?php if ( of_get_option('twitter_url') ) : ?>
+                                    <li>
+                                        <a href="<?php echo of_get_option('twitter_url'); ?>" target="_blank">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if ( of_get_option('facebook_url') ) : ?>
+                                    <li>
+                                        <a href="<?php echo of_get_option('facebook_url'); ?>" target="_blank">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
