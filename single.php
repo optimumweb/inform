@@ -49,7 +49,7 @@
                 <aside id="sidebar" role="complementary">
                     <?php wpbp_sidebar_inside_before(); ?>
                     <div class="post-author">
-                        <?php if ( $author_avatar = get_avatar(get_the_author_meta('ID'), 75) ) : ?>
+                        <?php if ( $author_avatar = get_avatar(get_the_author_meta('ID'), 150) ) : ?>
                             <div class="post-author-avatar">
                                 <?php echo $author_avatar; ?>
                             </div>
