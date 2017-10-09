@@ -9,13 +9,13 @@
                 <?php the_post_thumbnail('inform_cover'); ?>
             </div>
         <?php endif; ?>
-        <div class="post-meta">
-            <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php printf(__('Posted on %s', 'wpbp'), get_the_time(__('l, F jS, Y', 'wpbp'))); ?></time>
-            <span class="post-author byline author vcard"><?php _e('by', 'wpbp'); ?> <?php the_author_posts_link(); ?></span>
+        <div class="<?php wpbp_container_class(); ?>">
+            <div class="grid_12">
+                <h1 class="post-title">
+                    <?php the_title(); ?>
+                </h1>
+            </div>
         </div>
-        <h1 class="post-title">
-            <?php the_title(); ?>
-        </h1>
     </header>
     <?php wpbp_content_before(); ?>
     <section id="content">
@@ -25,6 +25,10 @@
                 <?php wpbp_main_before(); ?>
                 <section id="main" role="main">
                     <?php wpbp_main_inside_before(); ?>
+                    <div class="post-meta">
+                        <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php printf(__('Posted on %s', 'wpbp'), get_the_time(__('l, F jS, Y', 'wpbp'))); ?></time>
+                        <span class="post-author byline author vcard"><?php _e('by', 'wpbp'); ?> <?php the_author_posts_link(); ?></span>
+                    </div>
                     <section class="post-content">
                         <?php the_content(); ?>
                     </section>
