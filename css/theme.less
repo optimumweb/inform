@@ -161,12 +161,6 @@ input[type="submit"] {
   margin-bottom: 2em;
 }
 
-.post-header {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .post-title {
   font-weight: bold;
 }
@@ -180,6 +174,17 @@ input[type="submit"] {
 
 .post-thumbnail {
   margin-bottom: 1em;
+}
+
+body.single {
+  .post {
+    .post-header {
+      height: 400px;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 ul.checkmarks {

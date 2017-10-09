@@ -19,8 +19,6 @@ $(document).ready(function() {
             $postCoverImg   = $postCover.find('img'),
             postCoverImgSrc = $postCoverImg.attr('src');
 
-        console.log($post, $postHeader, $postCover, $postCoverImg, postCoverImgSrc);
-
         if ( postCoverImgSrc.length > 0 ) {
             $postHeader.css('background-image', 'url(' + postCoverImgSrc + ')');
             $postCover.remove();
