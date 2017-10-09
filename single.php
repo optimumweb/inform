@@ -48,6 +48,9 @@
                 <?php wpbp_sidebar_before(); ?>
                 <aside id="sidebar" role="complementary">
                     <?php wpbp_sidebar_inside_before(); ?>
+                    <div class="post-author">
+                        <h3><?php the_author(); ?></h3>
+                    </div>
                     <?php get_sidebar(); ?>
                     <?php wpbp_sidebar_inside_after(); ?>
                 </aside>
