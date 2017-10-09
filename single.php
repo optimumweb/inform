@@ -54,7 +54,13 @@
                                 <?php echo $author_avatar; ?>
                             </div>
                         <?php endif; ?>
-                        <h3><?php the_author(); ?></h3>
+                        <h3 class="post-author-name"><?php the_author(); ?></h3>
+                        <p class="post-author-description">
+                            <?php the_author_meta('user_description'); ?>
+                        </p>
+                        <a class="post-author-url" href="<?php the_author_meta('user_url'); ?>" target="_blank">
+                            <?php the_author_meta('user_url'); ?>
+                        </a>
                     </div>
                     <?php get_sidebar(); ?>
                     <?php wpbp_sidebar_inside_after(); ?>
