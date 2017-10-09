@@ -3,3 +3,41 @@
    Helpers
    ========================================================================== */
 
+ul.checkmarks {
+  list-style: none;
+
+  > li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    &:before {
+      font-family: 'FontAwesome', sans-serif;
+      content: "\f00c";
+      margin-right: 1em;
+      margin-left: -2em;
+    }
+  }
+}
+
+.social-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 0 0.5em;
+    font-size: 1.25em;
+    color: @white60;
+    line-height: 2.5rem;
+
+    &:hover {
+      color: @contrastColor;
+      background-color: @black60;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php wpbp_post_before(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-single'); ?>>
     <?php wpbp_post_inside_before(); ?>
     <header class="post-header">
         <?php if ( has_post_thumbnail() ) : ?>
