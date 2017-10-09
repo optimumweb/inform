@@ -1,0 +1,41 @@
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+// Small
+@media screen and (max-width: 40rem) {
+
+  #main-nav {
+    font-size: 1.125em;
+
+    .menu-toggle {
+      display: block;
+    }
+
+    ul.menu {
+      display: none;
+
+      > li {
+        display: block;
+        margin-left: 0;
+
+        > ul.sub-menu {
+          position: static;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #sidebar {
+    margin-top: 2em !important;
+  }
+
+}
+
+// Medium
+@media screen and (min-width: 40.063rem) and (max-width: 64rem) {}
+
+// Large
+@media screen and (min-width: 64.063rem) {}
