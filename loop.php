@@ -28,7 +28,9 @@
                             <?php the_content(); ?>
                         </section>
                     <?php else : ?>
-                        <?php /*the_excerpt();*/ ?>
+                        <section class="post-excerpt">
+                            <?php the_excerpt(); ?>
+                        </section>
                     <?php endif; ?>
                     <?php if ( is_single() ) : ?>
                         <footer class="post-footer">
