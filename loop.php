@@ -7,14 +7,14 @@
                 <?php wpbp_post_before(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <?php wpbp_post_inside_before(); ?>
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="post-thumbnail">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('inform_small'); ?>
-                            </a>
-                        </div>
-                    <?php endif; ?>
                     <header class="post-header">
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <div class="post-thumbnail">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('inform_small'); ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
                         <div class="post-meta">
                             <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php printf(__('Posted on %s', 'wpbp'), get_the_time(__('l, F jS, Y', 'wpbp'))); ?></time>
                             <span class="post-author byline author vcard"><?php _e('by', 'wpbp'); ?> <?php the_author_posts_link(); ?></span>
