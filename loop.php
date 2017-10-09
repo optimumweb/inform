@@ -23,16 +23,18 @@
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h2>
                     </header>
-                    <section class="post-content">
-                        <?php if ( is_single() ) : ?>
+                    <?php if ( is_single() ) : ?>
+                        <section class="post-content">
                             <?php the_content(); ?>
-                        <?php else : ?>
-                            <?php /*the_excerpt();*/ ?>
-                        <?php endif; ?>
-                    </section>
-                    <footer class="post-footer">
-                        <p class="post-tags"><?php the_tags(); ?></p>
-                    </footer>
+                        </section>
+                    <?php else : ?>
+                        <?php /*the_excerpt();*/ ?>
+                    <?php endif; ?>
+                    <?php if ( is_single() ) : ?>
+                        <footer class="post-footer">
+                            <p class="post-tags"><?php the_tags(); ?></p>
+                        </footer>
+                    <?php endif; ?>
                     <?php wpbp_post_inside_after(); ?>
                 </article>
                 <?php wpbp_post_after(); ?>
