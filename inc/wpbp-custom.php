@@ -117,12 +117,3 @@ function inform_custom_styles($init_array)
 	return $init_array;
 }
 add_filter('tiny_mce_before_init', 'inform_custom_styles');
-
-function inform_get_user_avatar_url($user_id, $size)
-{
-	if ( function_exists('get_cupp_meta') && $url = get_cupp_meta($user_id, $size) ) {
-		return $url;
-	} elseif ( function_exists('get_avatar_url') && $url = get_avatar_url($user_id, [ 'size' => $size ]) ) {
-		return $url;
-	}
-}

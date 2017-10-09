@@ -48,9 +48,9 @@
                 <aside id="sidebar" role="complementary">
                     <?php wpbp_sidebar_inside_before(); ?>
                     <div class="post-author">
-                        <?php if ( $author_avatar_url = inform_get_user_avatar_url(get_the_author_meta('ID')) ) : ?>
+                        <?php if ( $author_avatar = get_avatar(get_the_author_meta('ID'), 130) ) : ?>
                             <div class="post-author-avatar">
-                                <img class="post-author-avatar-img" src="<?php echo $author_avatar_url; ?>" />
+                                <?php echo $author_avatar; ?>
                             </div>
                         <?php endif; ?>
                         <h3 class="post-author-name"><?php the_author(); ?></h3>
