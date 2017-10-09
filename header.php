@@ -7,7 +7,7 @@
             <div class="<?php wpbp_container_class(); ?>">
                 <div class="grid_4 mobile-center">
                     <h1 id="site-title">
-                        <a class="valign" href="<?php echo home_url(); ?>/">
+                        <a href="<?php echo home_url(); ?>/">
                             <?php if ( function_exists('of_get_option') && of_get_option('logo') ) : ?>
                                 <img id="site-logo" src="<?php echo of_get_option('logo'); ?>" alt="<?php bloginfo('name'); ?>" />
                             <?php else : ?>
@@ -17,7 +17,7 @@
                     </h1>
                 </div>
                 <div class="grid_8 text-right mobile-center">
-                    <div id="site-search">
+                    <div id="site-search" class="valign">
                         <?php get_search_form(); ?>
                     </div>
                 </div>
