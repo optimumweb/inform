@@ -16,6 +16,11 @@ add_action('init', 'enqueue');
 function inform_init()
 {
 	load_theme_textdomain('inform', THEME_DIRECTORY . '/lang');
+
+	add_image_size('inform_small',  200,  100, true);
+	add_image_size('inform_medium', 800,  400, true);
+	add_image_size('inform_large',  1200, 600, true);
+	add_image_size('inform_cover',  2000, 400, true);
 }
 add_action('init', 'inform_init');
 
@@ -80,9 +85,9 @@ function inform_default_options()
 	return array(
 		'base_font_family'    => "'Karla', sans-serif",
 		'heading_font_family' => "'Arvo', serif",
-		'primary_color'       => "#746aca",
-		'complimentary_color' => "#3c3769",
-		'contrast_color'      => "#fde428",
+		'primary_color'       => "#007363",
+		'complimentary_color' => "#002b73",
+		'contrast_color'      => "#ffd614",
 		'text_color'          => "#646464",
 		'headings_color'      => "#444444",
 		'contrast_text_color' => "#000000"
