@@ -18,30 +18,30 @@
                             </nav>
                         <?php endif; ?>
                     </div>
-                    <div class="grid_3 text-right mobile-center">
-                        <div id="copy">
-                            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
-                        </div>
-                    </div>
-                    <div class="grid_3 text-right mobile-center">
+                    <div class="grid_3 mobile-center">
                         <?php if ( function_exists('of_get_option') ) : ?>
                             <ul class="social-links">
-                                <?php if ( of_get_option('twitter_url') ) : ?>
+                                <?php if ( $twitter_url = of_get_option('twitter_url') ) : ?>
                                     <li>
-                                        <a href="<?php echo of_get_option('twitter_url'); ?>" target="_blank">
+                                        <a href="<?php echo $twitter_url; ?>" target="_blank">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                <?php if ( of_get_option('facebook_url') ) : ?>
+                                <?php if ( $facebook_url = of_get_option('facebook_url') ) : ?>
                                     <li>
-                                        <a href="<?php echo of_get_option('facebook_url'); ?>" target="_blank">
+                                        <a href="<?php echo $facebook_url; ?>" target="_blank">
                                             <i class="fa fa-facebook"></i>
                                         </a>
                                     </li>
                                 <?php endif; ?>
                             </ul>
                         <?php endif; ?>
+                    </div>
+                    <div class="grid_3 text-right mobile-center">
+                        <div id="copy">
+                            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+                        </div>
                     </div>
                 </div>
             </div>
