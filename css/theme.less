@@ -189,14 +189,6 @@
         }
       }
 
-      &:hover,
-      &.current-menu-item,
-      &.current-menu-ancestor {
-        > a {
-          background-color: @primaryColor;
-        }
-      }
-
       &.menu-item-has-children {
         > a {
           &:after {
@@ -215,6 +207,16 @@
       &:hover {
         > ul.sub-menu {
           display: block;
+        }
+      }
+    }
+
+    li {
+      &:hover,
+      &.current-menu-item,
+      &.current-menu-ancestor {
+        > a {
+          background-color: @primaryColor;
         }
       }
     }
