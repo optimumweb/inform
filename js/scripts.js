@@ -12,4 +12,17 @@ $(document).ready(function() {
         }
     });
 
+    $('.post').each(function() {
+        var $post           = $(this),
+            $postHeader     = $post.find('.post-header'),
+            $postCover      = $postHeader.find('.post-cover'),
+            $postCoverImg   = $postCover.find('img'),
+            postCoverImgSrc = $postCoverImg.attr('src');
+
+        if ( postCoverImgSrc.length > 0 ) {
+            $postHeader.css('background-image', 'url(' + postCoverImgSrc + ')');
+            $postCover.remove();
+        }
+    });
+
 });
