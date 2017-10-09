@@ -16,7 +16,7 @@
                             </div>
                         <?php endif; ?>
                         <div class="post-meta">
-                            <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php the_time(__('F jS, Y', 'wpbp')); ?></time> |
+                            <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php the_time(__('l, F jS, Y', 'wpbp')); ?></time> |
                             <span class="post-author byline author vcard"><?php the_author_posts_link(); ?></span>
                         </div>
                         <h2 class="post-title">
