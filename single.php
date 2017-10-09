@@ -10,7 +10,7 @@
             </div>
         <?php endif; ?>
         <div class="<?php wpbp_container_class(); ?>">
-            <div class="grid_12">
+            <div class="<?php wpbp_option('main_class'); ?>">
                 <h1 class="post-title">
                     <?php the_title(); ?>
                 </h1>
