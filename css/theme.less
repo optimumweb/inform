@@ -255,15 +255,23 @@
   color: @white;
   background-color: @darkGrey;
 
-  #footer-nav {
-    ul.menu {
-      li {
-        display: inline-block;
-        padding-right: 1em;
+  a {
+    color: @white;
 
-        &:last-child {
-          padding-right: 0;
-        }
+    &:hover {
+      color: @contrastColor;
+    }
+  }
+}
+
+#footer-nav {
+  ul.menu {
+    li {
+      display: inline-block;
+      padding-right: 1em;
+
+      &:last-child {
+        padding-right: 0;
       }
     }
   }
