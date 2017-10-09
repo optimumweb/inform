@@ -181,11 +181,23 @@
           > a {
             color: @white;
             padding: 0.5em 2em;
+          }
 
-            &:hover {
+          &:hover,
+          &.current-menu-item,
+          &.current-menu-ancestor {
+            > a {
               color: @complimentaryColor;
             }
           }
+        }
+      }
+
+      &:hover,
+      &.current-menu-item,
+      &.current-menu-ancestor {
+        > a {
+          background-color: @primaryColor;
         }
       }
 
@@ -207,16 +219,6 @@
       &:hover {
         > ul.sub-menu {
           display: block;
-        }
-      }
-    }
-
-    li {
-      &:hover,
-      &.current-menu-item,
-      &.current-menu-ancestor {
-        > a {
-          background-color: @primaryColor;
         }
       }
     }
