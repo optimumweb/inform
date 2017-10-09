@@ -235,19 +235,10 @@
 }
 
 #footer {
-  background-color: @darkGrey;
-  color: @white;
+  background-color: @lightGrey;
 
   h1, h2, h3, h4, h5, h6 {
     color: @white;
-  }
-
-  a {
-    color: @white;
-
-    &:hover {
-      color: @contrastColor;
-    }
   }
 
   #footer-widgets {
@@ -259,37 +250,12 @@
       .widget-title {
         margin-bottom: 2em;
       }
-
-      &.widget_recent_entries {
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-
-          > li {
-            margin-bottom: 1em;
-          }
-        }
-
-        a {
-          display: block;
-          font-size: 1.125em;
-          font-weight: bold;
-        }
-
-        .post-date {
-          display: block;
-          font-size: 0.875em;
-          color: @white60;
-          text-transform: uppercase;
-          margin-top: 0.25em;
-        }
-      }
     }
   }
 
   #bottom-bar {
-    padding: 2em 0;
+    padding: 1.5em 0;
+    color: @white;
     background-color: @black20;
 
     #footer-nav {
