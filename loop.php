@@ -24,10 +24,10 @@
                         </h2>
                     </header>
                     <section class="post-content">
-                        <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search ?>
-                            <?php /*the_excerpt();*/ ?>
-                        <?php else : ?>
+                        <?php if ( is_single() ) : // Only display excerpts for archives and search ?>
                             <?php the_content(); ?>
+                        <?php else : ?>
+                            <?php /*the_excerpt();*/ ?>
                         <?php endif; ?>
                     </section>
                     <footer class="post-footer">
