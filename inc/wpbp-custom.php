@@ -108,8 +108,7 @@ function inform_custom_styles($init_array)
 		array(
 			'title'   => __("Heading Number", 'inform'),
 			'block'   => 'span',
-			'classes' => 'heading-number',
-			'wrapper' => true
+			'classes' => 'heading-number'
 		)
 	);
 
