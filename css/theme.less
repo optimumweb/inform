@@ -222,6 +222,13 @@ ul.checkmarks {
   }
 }
 
+#site-search {
+  .search-form {
+    max-width: 25rem;
+    float: right;
+  }
+}
+
 #main-nav {
   font-size: 0.875em;
   text-transform: uppercase;
@@ -436,15 +443,15 @@ ul.checkmarks {
   }
 }
 
-#searchform {
-  #searchsubmit {
+.search-form {
+  .search-submit {
     font-family: FontAwesome;
     float: right;
     line-height: 0.85em;
     .multi-border-radius(0, @borderRadius, @borderRadius, 0);
   }
 
-  #s {
+  .search-field {
     border-right: none !important;
     .multi-border-radius(@borderRadius, 0, 0, @borderRadius);
   }
