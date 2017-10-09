@@ -176,6 +176,15 @@ input[type="submit"] {
   margin-bottom: 1em;
 }
 
+.post-author {
+  .post-author-avatar {
+    img {
+      border: 3px solid @white;
+      .border-radius(@infRadius);
+    }
+  }
+}
+
 body.single {
   .post {
     .post-header {
@@ -202,6 +211,11 @@ body.single {
         font-weight: 300;
       }
     }
+  }
+
+  #sidebar {
+    position: relative;
+    top: -7rem;
   }
 }
 
