@@ -94,3 +94,27 @@ function inform_default_options()
 		'contrast_text_color' => "#000000"
 	);
 }
+
+function inform_add_style_select_buttons($buttons)
+{
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+}
+add_filter('mce_buttons_2', 'inform_add_style_select_buttons');
+
+function inform_custom_styles($init_array)
+{
+	$style_formats = array(
+		array(
+			'title'   => __("Heading Number", 'inform'),
+			'block'   => 'span',
+			'classes' => 'heading-number',
+			'wrapper' => true,
+		)
+	);
+
+	$init_array['style_formats'] = json_encode($style_formats);
+
+	return $init_array;
+}
+add_filter('tiny_mce_before_init', 'inform_custom_styles');
