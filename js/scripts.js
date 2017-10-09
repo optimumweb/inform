@@ -21,7 +21,7 @@ $(document).ready(function() {
 
         if ( postCoverImgSrc.length > 0 ) {
             $postHeader.css('background-image', 'url(' + postCoverImgSrc + ')');
-            $postCover.remove();
+            $postCover.hide();
         }
     });
 
