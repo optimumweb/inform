@@ -1,0 +1,13 @@
+.heading-number {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-size: 85%;
+    font-weight: normal;
+    background-color: #000;
+    color: #fff;
+    border-radius: 9999px;
+    margin-right: 0.25em;
+}

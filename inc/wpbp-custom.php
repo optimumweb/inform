@@ -22,6 +22,8 @@ function inform_init()
 	add_image_size('inform_medium', 800,  400, true);
 	add_image_size('inform_large',  1200, 600, true);
 	add_image_size('inform_cover',  2000, 400, true);
+
+	add_editor_style('editor-style.css');
 }
 add_action('init', 'inform_init');
 
