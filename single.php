@@ -26,8 +26,7 @@
                 <section id="main" role="main">
                     <?php wpbp_main_inside_before(); ?>
                     <div class="post-meta">
-                        <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php the_time(__('l, F jS, Y', 'wpbp')); ?></time> |
-                        <span class="post-author byline author vcard"><?php the_author_posts_link(); ?></span>
+                        <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php the_time(__('l, F jS, Y', 'wpbp')); ?></time>
                     </div>
                     <section class="post-content">
                         <?php the_content(); ?>
