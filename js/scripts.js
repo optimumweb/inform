@@ -19,7 +19,7 @@ $(document).ready(function() {
             $postCoverImg   = $postCover.find('img'),
             postCoverImgSrc = $postCoverImg.attr('src');
 
-        if ( postCoverImgSrc.length > 0 ) {
+        if ( typeof postCoverImgSrc !== 'undefined' && postCoverImgSrc.length > 0 ) {
             $postHeader.css('background-image', 'url(' + postCoverImgSrc + ')');
             $postCover.hide();
         }
