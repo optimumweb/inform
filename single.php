@@ -63,7 +63,7 @@
                     </div>
                     <?php if ( get_post_type() == 'post' ) : ?>
                         <div class="related-posts">
-                            <h3 class="related-posts-title underline"><?php _e("Related Articles", 'inform'); ?></h3>
+                            <h3 class="related-posts-title underline"><?php _e("Related Articles", 'wpbp'); ?></h3>
                             <?php echo do_shortcode('[wpbp_related_posts post_template="related-post"]'); ?>
                         </div>
                     <?php endif; ?>
