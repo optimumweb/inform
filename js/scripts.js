@@ -12,11 +12,11 @@ $(document).ready(function() {
         }
     });
 
-    $('.post-single').each(function() {
+    $('.post').each(function() {
         var $post           = $(this),
-            $postHeader     = $post.find('.post-header'),
-            $postCover      = $postHeader.find('.post-cover'),
-            $postCoverImg   = $postCover.find('img'),
+            $postHeader     = $post.children('.post-header'),
+            $postCover      = $postHeader.children('.post-cover'),
+            $postCoverImg   = $postCover.children('img'),
             postCoverImgSrc = $postCoverImg.attr('src');
 
         if ( typeof postCoverImgSrc !== 'undefined' && postCoverImgSrc.length > 0 ) {
