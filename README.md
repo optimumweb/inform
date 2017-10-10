@@ -4,10 +4,10 @@ inForm
 ## Required WordPress Plugins
 
 - [Options Framework](https://wordpress.org/plugins/options-framework/) by [Devin Price](https://wptheming.com)
-- [Custom User Profile Photo](https://wordpress.org/plugins/custom-user-profile-photo/) by [VincentListrani](http://vincentlistrani.com)
 
 ## Recommended WordPress Plugins
 
+- [WP User Avatar](https://wordpress.org/plugins/wp-user-avatar/) by [flippercode](http://www.flippercode.com)
 - [W3 Total Cache](https://fr.wordpress.org/plugins/w3-total-cache/) by [Frederick Townes](https://www.linkedin.com/in/fredericktownes)
 - [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) by [Team Yoast](https://yoast.com)
 - [Widget CSS Classes](https://wordpress.org/plugins/widget-css-classes/) by [C.M. Kendrick](http://cleverness.org)
