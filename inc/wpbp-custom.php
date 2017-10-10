@@ -17,6 +17,7 @@ function inform_init()
 {
 	load_theme_textdomain('inform', THEME_DIRECTORY . '/lang');
 
+	add_image_size('inform_square', 400,  400, true);
 	add_image_size('inform_mini',   200,  100, true);
 	add_image_size('inform_small',  400,  200, true);
 	add_image_size('inform_medium', 800,  400, true);

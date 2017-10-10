@@ -6,7 +6,7 @@
             <?php if ( has_post_thumbnail() ) : ?>
                 <div class="post-thumbnail">
                     <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('inform_small'); ?>
+                        <?php the_post_thumbnail('inform_square'); ?>
                     </a>
                 </div>
             <?php endif; ?>
