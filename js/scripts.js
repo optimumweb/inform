@@ -12,7 +12,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.post').each(function() {
+    $('.post-single').each(function() {
         var $post           = $(this),
             $postHeader     = $post.find('.post-header'),
             $postCover      = $postHeader.find('.post-cover'),
