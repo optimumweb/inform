@@ -61,6 +61,12 @@
                             <?php the_author_meta('user_url'); ?>
                         </a>
                     </div>
+                    <?php if ( get_post_type() == 'post' ) : ?>
+                        <div class="related-posts">
+                            <h3 class="related-posts-title"><?php _e("Related Articles", 'inform'); ?></h3>
+                            <?php echo do_shortcode('[wpbp_related_posts post_template="related-post"]'); ?>
+                        </div>
+                    <?php endif; ?>
                     <?php get_sidebar(); ?>
                     <?php wpbp_sidebar_inside_after(); ?>
                 </aside>
