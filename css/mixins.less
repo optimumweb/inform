@@ -121,3 +121,14 @@
 	clear: both;
 	visibility: hidden;
 }
+
+.gradient-border-bottom(@height, @start, @stop, @spacing: 0.25em) {
+	&:after {
+		content: " ";
+		display: block;
+		width: 100%;
+		height: @height;
+		.horizontal-gradient(@start, @stop);
+		margin-top: @spacing;
+	}
+}

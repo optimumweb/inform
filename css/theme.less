@@ -6,16 +6,7 @@
 .widget {
   .widget-title {
     margin-top: 0;
-    //border-bottom: 2px solid @borderColor;
-
-    &:after {
-      content: " ";
-      display: block;
-      width: 100%;
-      height: 2px;
-      .horizontal-gradient(@complimentaryColor, @primaryColor);
-      margin-top: 0.25em;
-    }
+    .gradient-border-bottom(2px, @complimentaryColor, @primaryColor);
   }
 
   ul {
@@ -40,9 +31,8 @@
 }
 
 .page-title {
-  border-bottom: 2px solid @borderColor;
-  padding-bottom: 0.25em;
   margin-top: 0;
+  .gradient-border-bottom(2px, @complimentaryColor, @primaryColor);
 }
 
 .post {
