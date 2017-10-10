@@ -118,4 +118,20 @@ input[type="submit"] {
 
 table {
   width: 100%;
+
+  thead > tr {
+    border-bottom: 1px solid @borderColor;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  tbody {
+    > tr:nth-child(odd) {
+      > th, > td {
+        background-color: @black10;
+      }
+    }
+  }
 }
