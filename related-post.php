@@ -16,9 +16,9 @@
                 <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php the_time(__('l, F jS, Y', 'wpbp')); ?></time> |
                 <span class="post-author byline author vcard"><?php the_author_posts_link(); ?></span>
             </div>
-            <h2 class="post-title">
+            <h4 class="post-title">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h2>
+            </h4>
         </div>
     </div>
     <?php wpbp_post_inside_after(); ?>
