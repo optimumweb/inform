@@ -13,7 +13,7 @@
                             <?php else : ?>
                                 <?php bloginfo('name'); ?>
                                 <?php if ( get_bloginfo('description') ) : ?>
-                                    <span class="site-description"><?php bloginfo('description'); ?></span>
+                                    <span id="site-description"><?php bloginfo('description'); ?></span>
                                 <?php endif; ?>
                             <?php endif; ?>
                         </a>
