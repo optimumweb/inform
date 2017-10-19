@@ -120,3 +120,13 @@ function inform_custom_styles($init_array)
 	return $init_array;
 }
 add_filter('tiny_mce_before_init', 'inform_custom_styles');
+
+function inform_post_main_category_name($post_id = false)
+{
+	$categories = get_the_category($post_id);
+	if ( !empty($categories) && is_array($categories) ) {
+		foreach ( $categories as $category ) {
+			return $category['name'];
+		}
+	}
+}

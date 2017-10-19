@@ -11,9 +11,8 @@
         <?php endif; ?>
         <div class="<?php wpbp_container_class(); ?>">
             <div class="<?php wpbp_option('main_class'); ?>">
-                <h1 class="post-title">
-                    <?php the_title(); ?>
-                </h1>
+                <h4 class="post-category"><?php echo inform_post_main_category_name(); ?></h4>
+                <h1 class="post-title"><?php the_title(); ?></h1>
             </div>
         </div>
     </header>
