@@ -6,18 +6,22 @@
             <?php wpbp_header_inside_before(); ?>
             <div class="<?php wpbp_container_class(); ?>">
                 <div class="grid_4 medium_grid_4 mobile-center">
-                    <h1 id="site-title">
-                        <a href="<?php echo home_url(); ?>/">
-                            <?php if ( function_exists('of_get_option') && of_get_option('logo') ) : ?>
+                    <?php if ( function_exists('of_get_option') && of_get_option('logo') ) : ?>
+                        <h1 id="site-title" class="with-logo">
+                            <a href="<?php echo home_url(); ?>/">
                                 <img id="site-logo" src="<?php echo of_get_option('logo'); ?>" alt="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" />
-                            <?php else : ?>
+                            </a>
+                        </h1>
+                    <?php else : ?>
+                        <h1 id="site-title" class="no-logo">
+                            <a href="<?php echo home_url(); ?>/">
                                 <?php bloginfo('name'); ?>
                                 <?php if ( get_bloginfo('description') ) : ?>
                                     <span id="site-description"><?php bloginfo('description'); ?></span>
                                 <?php endif; ?>
-                            <?php endif; ?>
-                        </a>
-                    </h1>
+                            </a>
+                        </h1>
+                    <?php endif; ?>
                 </div>
                 <div class="grid_8 medium_grid_8 text-right mobile-center">
                     <div id="site-search">
