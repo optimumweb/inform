@@ -68,13 +68,15 @@ function optionsframework_options()
     $options[] = array(
         'name' => __("Base Font Family", 'inform'),
         'id'   => 'base_font_family',
-        'type' => 'text'
+        'type' => 'text',
+        'std'  => $default_options['base_font_family']
     );
 
     $options[] = array(
         'name' => __("Heading Font Family", 'inform'),
         'id'   => 'heading_font_family',
-        'type' => 'text'
+        'type' => 'text',
+        'std'  => $default_options['heading_font_family']
     );
 
     $options[] = array(
