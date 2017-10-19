@@ -20,7 +20,7 @@
                     </h1>
                 </div>
                 <div class="grid_8 text-right mobile-center">
-                    <div id="site-search" class="valign">
+                    <div id="site-search" class="valign" data-valign-ref="#header">
                         <?php get_search_form(); ?>
                     </div>
                 </div>
