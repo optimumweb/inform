@@ -4,7 +4,7 @@
    ========================================================================== */
 
 // Small
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: @screenSmall) {
 
   #site-search {
     margin-top: 1em;
@@ -41,10 +41,10 @@
 }
 
 // Medium
-@media screen and (min-width: 40.063rem) and (max-width: 64rem) {}
+@media screen and (min-width: @screenSmall) and (max-width: @screenMedium) {}
 
 // Small & Medium
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: @screenMedium) {
 
   #sidebar {
     top: 0 !important;
@@ -53,4 +53,4 @@
 }
 
 // Large
-@media screen and (min-width: 64.063rem) {}
+@media screen and (min-width: @screenMedium) {}
