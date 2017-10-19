@@ -130,13 +130,12 @@ add_filter('tiny_mce_before_init', 'inform_custom_styles');
 
 function inform_post_main_category_name($post_id = false)
 {
-	return '';
 	if ( function_exists('get_the_category') ) {
 		$categories = get_the_category($post_id);
 		if ( !empty($categories) && is_array($categories) ) {
 			foreach ( $categories as $category ) {
-				if ( array_key_exists('name', $category) ) {
-					return $category['name'];
+				if ( is_object($category) && property_exists($category, 'name') ) {
+					return $category->name;
 				}
 			}
 		}
