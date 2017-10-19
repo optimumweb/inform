@@ -5,3 +5,4 @@
     </div>
     <div class="clear"></div>
 </form>
+<div class="clear"></div>
