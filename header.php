@@ -12,6 +12,9 @@
                                 <img id="site-logo" src="<?php echo of_get_option('logo'); ?>" alt="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" />
                             <?php else : ?>
                                 <?php bloginfo('name'); ?>
+                                <?php if ( get_bloginfo('description') ) : ?>
+                                    <span class="site-description"><?php bloginfo('description'); ?></span>
+                                <?php endif; ?>
                             <?php endif; ?>
                         </a>
                     </h1>
