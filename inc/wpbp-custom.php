@@ -91,8 +91,8 @@ if ( isset($_GET['recompile_css']) || is_user_logged_in() ) {
 function inform_default_options()
 {
 	return array(
-		'base_font_family'    => "'Karla', sans-serif",
-		'heading_font_family' => "'Arvo', serif",
+		'base_font_family'    => "Helvetica, Arial, sans-serif",
+		'heading_font_family' => "Helvetica, Arial, sans-serif",
 		'primary_color'       => "#007363",
 		'complimentary_color' => "#002b73",
 		'contrast_color'      => "#ffd614",
