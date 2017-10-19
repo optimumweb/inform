@@ -13,6 +13,7 @@ function enqueue()
 }
 add_action('init', 'enqueue');
 
+
 function inform_init()
 {
 	load_theme_textdomain('inform', THEME_DIRECTORY . '/lang');
@@ -28,11 +29,13 @@ function inform_init()
 }
 add_action('init', 'inform_init');
 
+
 function inform_sidebars_init()
 {
 	wpbp_register_sidebars(array( "Footer" ));
 }
 add_action('widgets_init', 'inform_sidebars_init');
+
 
 function inform_compile_lesscss()
 {
@@ -84,6 +87,7 @@ if ( isset($_GET['recompile_css']) || is_user_logged_in() ) {
 	add_action('init', 'inform_compile_lesscss');
 }
 
+
 function inform_default_options()
 {
 	return array(
@@ -98,12 +102,14 @@ function inform_default_options()
 	);
 }
 
+
 function inform_add_style_select_buttons($buttons)
 {
 	array_unshift($buttons, 'styleselect');
 	return $buttons;
 }
 add_filter('mce_buttons_2', 'inform_add_style_select_buttons');
+
 
 function inform_custom_styles($init_array)
 {
@@ -120,6 +126,7 @@ function inform_custom_styles($init_array)
 	return $init_array;
 }
 add_filter('tiny_mce_before_init', 'inform_custom_styles');
+
 
 function inform_post_main_category_name($post_id = false)
 {
