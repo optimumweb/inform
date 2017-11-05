@@ -130,14 +130,18 @@ add_filter('tiny_mce_before_init', 'inform_custom_styles');
 
 function inform_post_main_category_name($post_id = false)
 {
-	if ( function_exists('get_the_category') ) {
+	if ( $main_category_id = get_post_meta($post_id, '_yoast_wpseo_primary_category', true) ) {
+		$main_category = get_term($main_category_id, 'category');
+	} else {
 		$categories = get_the_category($post_id);
 		if ( !empty($categories) && is_array($categories) ) {
 			foreach ( $categories as $category ) {
-				if ( is_object($category) && property_exists($category, 'name') ) {
-					return $category->name;
-				}
+				$main_category = $category;
+				break;
 			}
 		}
+	}
+	if ( isset($main_category) && is_object($main_category) && property_exists($main_category, 'name') ) {
+		return $main_category->name;
 	}
 }
