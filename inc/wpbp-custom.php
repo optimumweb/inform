@@ -130,6 +130,7 @@ add_filter('tiny_mce_before_init', 'inform_custom_styles');
 
 function inform_post_main_category_name($post_id = false)
 {
+	if ( !$post_id ) $post_id = get_post_id();
 	if ( $main_category_id = get_post_meta($post_id, '_yoast_wpseo_primary_category', true) ) {
 		$main_category = get_term($main_category_id, 'category');
 	} else {
