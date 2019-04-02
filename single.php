@@ -61,8 +61,8 @@
                                 <?php the_author_meta('user_url'); ?>
                             </a>
                             &bull;
-                            <a class="post-author-posts-link" href="<?php echo get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename')); ?>">
-                                <?php echo sprintf(__("See all posts by %s" ), get_the_author_meta('user_nicename')) ?>
+                            <a class="post-author-posts-link" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+                                <?php echo sprintf(__("See all posts by %s" ), get_the_author_meta('display_name')) ?>
                             </a>
                         </p>
                     </div>
