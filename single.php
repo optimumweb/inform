@@ -53,7 +53,6 @@
                                     <?php echo $author_avatar; ?>
                                 </div>
                             <?php endif; ?>
-                            <h5><?php _e("Author", 'inform') ?></h5>
                             <h3 class="post-author-name underline"><?php the_author(); ?></h3>
                             <p class="post-author-description">
                                 <?php the_author_meta('user_description'); ?>
