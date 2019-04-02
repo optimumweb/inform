@@ -46,26 +46,33 @@
                 <?php wpbp_sidebar_before(); ?>
                 <aside id="sidebar" role="complementary">
                     <?php wpbp_sidebar_inside_before(); ?>
-                    <div class="post-author">
-                        <?php if ( $author_avatar = get_avatar( get_the_author_meta( 'ID' ), 130 ) ) : ?>
-                            <div class="post-author-avatar">
-                                <?php echo $author_avatar; ?>
+                    <?php if ( $author_id = get_the_author_meta('ID') ) : ?>
+                        <?php if ( $author_url = get_the_author_meta('user_url') ) : ?>
+                            <div class="post-author">
+                                <?php if ( $author_avatar = get_avatar($author_id, 130) ) : ?>
+                                    <div class="post-author-avatar">
+                                        <?php echo $author_avatar; ?>
+                                    </div>
+                                <?php endif; ?>
+                                <h3 class="post-author-name underline"><?php the_author(); ?></h3>
+                                <p class="post-author-description">
+                                    <?php the_author_meta('user_description'); ?>
+                                </p>
+                                <p>
+                                    <a class="post-author-website-link" href="<?php echo $author_url; ?>" target="_blank">
+                                        <?php echo sprintf(__("Website: %s", 'inform'), $author_url); ?>
+                                    </a>
+                                </p>
+                                <?php if ( $author_posts_url = get_author_posts_url($author_id) ) : ?>
+                                    <p>
+                                        <a class="post-author-posts-link" href="<?php echo $author_posts_url; ?>">
+                                            <?php echo sprintf(__("See all posts by %s", 'inform'), get_the_author_meta('display_name')) ?>
+                                        </a>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
-                        <h3 class="post-author-name underline"><?php the_author(); ?></h3>
-                        <p class="post-author-description">
-                            <?php the_author_meta('user_description'); ?>
-                        </p>
-                        <p>
-                            <a class="post-author-website-link" href="<?php the_author_meta('user_url'); ?>" target="_blank">
-                                <?php the_author_meta('user_url'); ?>
-                            </a>
-                            &bull;
-                            <a class="post-author-posts-link" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
-                                <?php echo sprintf(__("See all posts by %s" ), get_the_author_meta('display_name')) ?>
-                            </a>
-                        </p>
-                    </div>
+                    <?php endif; ?>
                     <?php if ( get_post_type() == 'post' ) : ?>
                         <div class="related-posts">
                             <h3 class="related-posts-title underline"><?php _e("Related Articles", 'inform'); ?></h3>
