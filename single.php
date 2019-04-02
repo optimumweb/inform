@@ -58,17 +58,17 @@
                                 <p class="post-author-description">
                                     <?php the_author_meta('user_description'); ?>
                                 </p>
-                                <p>
+                                <div>
                                     <a class="post-author-website-link" href="<?php echo $author_url; ?>" target="_blank">
                                         <?php echo sprintf(__("Website: %s", 'inform'), $author_url); ?>
                                     </a>
-                                </p>
+                                </div>
                                 <?php if ( $author_posts_url = get_author_posts_url($author_id) ) : ?>
-                                    <p>
+                                    <div>
                                         <a class="post-author-posts-link" href="<?php echo $author_posts_url; ?>">
                                             <?php echo sprintf(__("See all posts by %s", 'inform'), get_the_author_meta('display_name')) ?>
                                         </a>
-                                    </p>
+                                    </div>
                                 <?php endif; ?>
                             </div>
                         <?php endif; ?>
