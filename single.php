@@ -47,7 +47,7 @@
                 <aside id="sidebar" role="complementary">
                     <?php wpbp_sidebar_inside_before(); ?>
                     <div class="post-author">
-                        <?php if ( $author_avatar = get_avatar(get_the_author_meta('ID'), 130) ) : ?>
+                        <?php if ( $author_avatar = get_avatar( get_the_author_meta( 'ID' ), 130 ) ) : ?>
                             <div class="post-author-avatar">
                                 <?php echo $author_avatar; ?>
                             </div>
@@ -56,9 +56,15 @@
                         <p class="post-author-description">
                             <?php the_author_meta('user_description'); ?>
                         </p>
-                        <a class="post-author-url" href="<?php the_author_meta('user_url'); ?>" target="_blank">
-                            <?php the_author_meta('user_url'); ?>
-                        </a>
+                        <p>
+                            <a class="post-author-website-link" href="<?php the_author_meta('user_url'); ?>" target="_blank">
+                                <?php the_author_meta('user_url'); ?>
+                            </a>
+                            &bull;
+                            <a class="post-author-posts-link" href="<?php echo get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename')); ?>">
+                                <?php echo sprintf(__("See all posts by %s" ), get_the_author_meta('user_nicename')) ?>
+                            </a>
+                        </p>
                     </div>
                     <?php if ( get_post_type() == 'post' ) : ?>
                         <div class="related-posts">
