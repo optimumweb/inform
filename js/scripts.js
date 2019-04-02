@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    var $sidebar = $('#sidebar');
+
     $('.menu-toggle').on('click', function(e) {
         e.preventDefault();
 
@@ -24,5 +26,9 @@ $(document).ready(function() {
             $postCover.hide();
         }
     });
+
+    if ( $sidebar.find('.post-author').length > 0 ) {
+        $sidebar.addClass('raised');
+    }
 
 });
