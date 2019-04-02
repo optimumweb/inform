@@ -11,12 +11,12 @@ inForm
 - [W3 Total Cache](https://fr.wordpress.org/plugins/w3-total-cache/) by [Frederick Townes](https://www.linkedin.com/in/fredericktownes)
 - [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) by [Team Yoast](https://yoast.com)
 - [Widget CSS Classes](https://wordpress.org/plugins/widget-css-classes/) by [C.M. Kendrick](http://cleverness.org)
-- [Limit Login Attempts](https://wordpress.org/plugins/limit-login-attempts/) by Johan Eenfeldt
+- [Limit Login Attempts Reloaded](https://wordpress.org/plugins/limit-login-attempts-reloaded/) by wpchefgadget
 - [Loco Translate](https://wordpress.org/plugins/loco-translate/) by [Tim Whitlock](https://localise.biz/wordpress/plugin)
 
 ## Author
 
-[Jonathan Roy](https://twitter.com/jonathanroy), [OptimumWeb](http://optimumweb.ca)
+[Jonathan Roy](https://twitter.com/jonathanroy), [OptimumWeb](https://optimumweb.ca)
 
 ## License
 
