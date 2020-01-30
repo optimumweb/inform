@@ -9,7 +9,7 @@ $(document).ready(function() {
             href  = $this.attr('href'),
             $menu = $(href);
 
-        if ( $menu.size() > 0 ) {
+        if ( $menu.length > 0 ) {
             $menu.slideToggle();
         }
     });
