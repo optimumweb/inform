@@ -1,35 +1,35 @@
         <?php wpbp_footer_before(); ?>
         <footer id="footer" role="contentinfo">
             <?php wpbp_footer_inside_before(); ?>
-            <?php if ( is_dynamic_sidebar("Footer") ) : ?>
+            <?php if ( is_dynamic_sidebar( "Footer" ) ) : ?>
                 <div id="footer-widgets">
                     <div class="<?php wpbp_container_class(); ?>">
-                        <?php dynamic_sidebar("Footer"); ?>
+                        <?php dynamic_sidebar( "Footer" ); ?>
                     </div>
                 </div>
             <?php endif; ?>
             <div id="bottom-bar">
                 <div class="<?php wpbp_container_class(); ?>">
                     <div class="grid_8 mobile-center">
-                        <?php if ( has_nav_menu('secondary_navigation') ) : ?>
+                        <?php if ( has_nav_menu( 'secondary_navigation' ) ) : ?>
                             <nav id="footer-nav">
-                                <?php wp_nav_menu(array( 'theme_location' => 'secondary_navigation' )); ?>
+                                <?php wp_nav_menu( array( 'theme_location' => 'secondary_navigation' ) ); ?>
                                 <div class="clear"></div>
                             </nav>
                         <?php endif; ?>
                     </div>
                     <div class="grid_4 text-right mobile-center">
                         <div id="copy">
-                            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+                            &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>
                         </div>
-                        <?php if ( function_exists('of_get_option') ) : ?>
+                        <?php if ( function_exists( 'of_get_option' ) ) : ?>
                             <div id="social-links">
-                                <?php if ( $twitter_url = of_get_option('twitter_url') ) : ?>
+                                <?php if ( $twitter_url = of_get_option( 'twitter_url' ) ) : ?>
                                     <a href="<?php echo $twitter_url; ?>" target="_blank">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 <?php endif; ?>
-                                <?php if ( $facebook_url = of_get_option('facebook_url') ) : ?>
+                                <?php if ( $facebook_url = of_get_option( 'facebook_url' ) ) : ?>
                                     <a href="<?php echo $facebook_url; ?>" target="_blank">
                                         <i class="fa fa-facebook"></i>
                                     </a>

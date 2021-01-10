@@ -11,12 +11,14 @@
                         <?php if ( has_post_thumbnail() ) : ?>
                             <div class="post-thumbnail">
                                 <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail('inform_medium'); ?>
+                                    <?php the_post_thumbnail( 'inform_medium' ); ?>
                                 </a>
                             </div>
                         <?php endif; ?>
                         <div class="post-meta">
-                            <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php the_time(__('l, F jS, Y', 'wpbp')); ?></time>
+                            <time class="post-date updated" datetime="<?php the_time( 'c' ); ?>" pubdate>
+                                <?php the_time( __( 'l, F jS, Y', 'wpbp' ) ); ?>
+                            </time>
                         </div>
                         <h2 class="post-title">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -52,7 +54,7 @@
     <?php endif; ?>
 <?php else : ?>
     <div class="notice">
-        <p class="bottom"><?php _e('Sorry, no results were found.', 'wpbp'); ?></p>
+        <p class="bottom"><?php _e( 'Sorry, no results were found.', 'wpbp' ); ?></p>
     </div>
     <?php get_search_form(); ?>
 <?php endif; ?>
