@@ -47,6 +47,7 @@ function inform_compile_lesscss() {
 		$variables = array(
 			'baseFontFamily'     => $default_options['base_font_family'],
 			'hFontFamily'        => $default_options['heading_font_family'],
+            'backgroundColor'    => $default_options['background_color'],
 			'primaryColor'       => $default_options['primary_color'],
 			'complimentaryColor' => $default_options['complimentary_color'],
 			'contrastColor'      => $default_options['contrast_color'],
@@ -59,6 +60,7 @@ function inform_compile_lesscss() {
 			$variables = array_merge( $variables, array_filter( array(
 				'baseFontFamily'     => of_get_option('base_font_family') ? of_get_option('base_font_family') : null,
 				'hFontFamily'        => of_get_option('heading_font_family') ? of_get_option('heading_font_family') : null,
+                'backgroundColor'    => of_get_option('background_color') ? of_get_option('background_color') : null,
 				'primaryColor'       => of_get_option('primary_color') ? of_get_option('primary_color') : null,
 				'complimentaryColor' => of_get_option('complimentary_color') ? of_get_option('complimentary_color') : null,
 				'contrastColor'      => of_get_option('contrast_color') ? of_get_option('contrast_color') : null,
@@ -89,6 +91,7 @@ function inform_default_options() {
 	return array(
 		'base_font_family'    => "Helvetica, Arial, sans-serif",
 		'heading_font_family' => "Helvetica, Arial, sans-serif",
+        'background_color'    => "#ffffff",
 		'primary_color'       => "#007363",
 		'complimentary_color' => "#002b73",
 		'contrast_color'      => "#ffd614",

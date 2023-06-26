@@ -81,6 +81,13 @@ function optionsframework_options() {
     );
 
     $options[] = array(
+        'name' => __( "Background Color", 'inform' ),
+        'id'   => 'background_color',
+        'type' => 'color',
+        'std'  => $default_options['background_color']
+    );
+
+    $options[] = array(
         'name' => __( "Primary Color", 'inform' ),
         'id'   => 'primary_color',
         'type' => 'color',
